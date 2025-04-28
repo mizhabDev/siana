@@ -4,7 +4,109 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Car Service Platform</title>
-    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="../public/css/style.css">
+    <style>.how-works {
+      background-color: #274200;
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+  }
+  
+  .section-title {
+      color: #E5AA5A;
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 60px;
+      font-family: 'Orbitron', sans-serif;
+  }
+  
+  .works-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+  }
+  
+  .works-row {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 60px;
+  }
+  
+  .works-row.second-row {
+      justify-content: center;
+      max-width: 800px;
+      margin: 0 auto;
+  }
+  
+  .work-item {
+      flex: 1;
+      max-width: 300px;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+  }
+  
+  .work-item img {
+      width: 200px;
+      height: auto;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+  }
+  
+  .work-item h3 {
+      color: white;
+      font-size: 1.2rem;
+      margin: 15px 0;
+      font-family: 'Orbitron', sans-serif;
+  }
+  
+  .work-item p {
+      color: #ccc;
+      font-size: 0.9rem;
+      line-height: 1.6;
+  }
+  
+  /* Background pattern */
+  .how-works::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 500%;
+      background-image: url('../public/images/Group 2844.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      /* opacity: 0.1; */
+      z-index: 3;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+      .works-row {
+          flex-wrap: wrap;
+          gap: 30px;
+      }
+  
+      .work-item {
+          flex: 1 1 calc(50% - 30px);
+      }
+  }
+  
+  @media (max-width: 768px) {
+      .work-item {
+          flex: 1 1 100%;
+      }
+  
+      .works-row.second-row {
+          flex-direction: column;
+          align-items: center;
+      }
+  }
+  
+  </style>
   
 </head>
 <body>
@@ -103,35 +205,7 @@
       </div>
     </section>
 
-    <!-- Testimonial Section -->
-    <section class="testimonials">
-      <div class="testimonial-header">
-        <h2>Customer Stories</h2>
-        <p>Discover what our satisfied customers have to say about their experience</p>
-      </div>
-      <div class="testimonial-cards">
-        <div class="testimonial-card">
-          <p>"The convenience of having mechanics come to my home has been a game-changer. I've saved countless hours and the service quality is outstanding."</p>
-          <div class="customer-info">
-            <img src="/api/placeholder/50/50" alt="Customer">
-            <div>
-              <div class="customer-name">Michael Johnson</div>
-              <div class="customer-role">Premium Member</div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <p>"I love how easy the app makes scheduling maintenance. The pricing is transparent and the technicians are always professional and knowledgeable."</p>
-          <div class="customer-info">
-            <img src="/api/placeholder/50/50" alt="Customer">
-            <div>
-              <div class="customer-name">Sarah Williams</div>
-              <div class="customer-role">Regular Customer</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    
 
     <!-- Team Section -->
     <section class="team-section">
@@ -188,6 +262,45 @@
       </div>
     </section>
   </main>
+
+  <section class="how-works">
+    <h2 class="section-title">How Works App</h2>
+    <div class="container">
+        <div class="works-grid">
+            <!-- First Row -->
+            <div class="works-row">
+                <div class="work-item">
+                    <img src="../public/images/Find Services you Want.png" alt="Find Services">
+                    <h3>Find Services you Want</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.</p>
+                </div>
+                <div class="work-item">
+                    <img src="../public/images/Send Request For Quotes.png" alt="Send Request">
+                    <h3>Send Request For Quotes</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.</p>
+                </div>
+                <div class="work-item">
+                    <img src="../public/images/Get Proposals form Garrages.png" alt="Get Proposals">
+                    <h3>Get Proposals form Garrages</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.</p>
+                </div>
+            </div>
+            <!-- Second Row -->
+            <div class="works-row second-row">
+                <div class="work-item">
+                    <img src="../public/images/Book for Proposal.png" alt="Book Proposal">
+                    <h3>Book for Proposal</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.</p>
+                </div>
+                <div class="work-item">
+                    <img src="../public/images/Payment for Service.png" alt="Payment">
+                    <h3>Payment for Service</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
   <footer>
     <div class="container">
