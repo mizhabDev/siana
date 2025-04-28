@@ -307,89 +307,103 @@ p {
 }
 
 
-/* Specific styles for first card */
-
+/* Specific styles for HOW WORKS*/
 
 .how-works {
-    /* padding: 30px 0; */
-    background: radial-gradient(circle at center, #092c2c, #011919);
+    padding: 80px 0;
+    background: radial-gradient(circle at center, #005050, #002020);
     color: white;
     text-align: center;
     position: relative;
-    /* overflow: hidden; */
+    overflow: hidden;
+    
 }
 
-/* .container { */
-    /* width: 100%; */
-    /* max-width: 1200px; */
-    /* margin: 0 auto; */
-/* } */
+.how-works h2 {
+    color: #E5AA5A;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.how-works h3 {
+    color: white;
+    font-size: 1.6rem;
+    margin: 20px 0 15px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
 .works-grid {
     display: flex;
     justify-content: center;
-    gap: 100px;
+    align-items: center;
     flex-wrap: wrap;
-    margin-top: 40px;
+    margin: 30px 0;
     position: relative;
-    padding: 50px;
+}
+
+.works-grid.second-row {
+    margin-top: 60px;
+    justify-content: center;
+}
+
+.work-item {
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
     z-index: 2;
 }
 
-
-
-.work-item img {
-    width: 100%;
-    height: auto;
+.phone-container {
+    position: relative;
+    height: 300px;
+    transition: transform 0.3s ease;
+    margin: 0 auto;
 }
 
-.work-item:hover img {
-    transform: scale(1.1);
+.phone-container img {
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
     transition: transform 0.3s ease;
 }
-/* 
+
+.work-item:hover .phone-container img {
+    transform: scale(1.05);
+}
+
+
+
 .how-works::before {
     content: "";
     position: absolute;
-    top: 10%;
+    top: 15%;
     left: 30%;
-    width: 50%;
-    height: 50%;
+    width: 40%;
+    height: 40%;
     background-image: url('../../public/images/Group 2844.png'); 
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: fixed;
     background-size: cover;/* Change to contain instead of cover */
-    /* opacity: 0.1; Add some transparency */
- /*   z-index: 3; 
-} */ 
-/* .work-item {
-    max-width: 250px;
-    position: relative;
-    z-index: 2;
-    overflow: hidden;
-}
-.how-works-section {
-    max-width: 1200px;
-    margin: auto;
-    padding: 50px 20px;
-    text-align: center;
-  }
-  
-  .steps-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px; /* space between boxes */
-/*  }
-  
-  .step {
-    width: 250px;
-    background: transparent;
-    text-align: center;
-  } */
+    color: white;
+   z-index: 3; 
+ } 
+
+
   
 
 /* Responsive Design */
+
+
 @media (max-width: 1024px) {
     .features-container {
         grid-template-columns: repeat(2, 1fr);
