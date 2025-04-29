@@ -21,6 +21,11 @@
         <div class="logo">
             <img src="../public/images/logo.png" alt="Siana Logo">
         </div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
         <nav>
             <ul class="nav-links">
                 <li><a href="#" class="home-link">Home</a></li>
@@ -31,7 +36,6 @@
                 <li><a href="#">Contact Us</a></li>
             </ul>
         </nav>
-        <a href="#" class="btn">Download App</a>
     </header>
 
     <section class="hero">
@@ -284,7 +288,7 @@
 
     <footer class="footer">
         <div class="footer-top">
-            <div class="footer-navbar">
+            <nav>
                 <ul class="footer-nav">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About Us</a></li>
@@ -292,84 +296,98 @@
                     <li><a href="#">Privacy & Policy</a></li>
                     <li><a href="#">Terms & Conditions</a></li>
                 </ul>
-            </div>
+            </nav>
         </div>
 
         <div class="footer-content">
-            <div class="footer-column brand-column">
-                <div class="logo">
-                    <img src="../public/images/logo.png" alt="SIANA Logo">
-                    <div class="tagline">
-                        <div class="tagline-main">The Ultimate</div>
-                        <div class="tagline-sub">Companion For Your Life</div>
+            <div class="footer-brand">
+                <img src="/public/images/logo.png" alt="Siana" class="footer-logo">
+                <p class="brand-description">The Ultimate Companion For Your Life. Professional Car Care is just a tap
+                    away! Download the app Siana Cars & Get the best quote from vendors around you!</p>
+            </div>
+
+            <div class="contact-info">
+                <h3 class="section-title">Contact Us</h3>
+                <div class="contact-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#00bfa6" viewBox="0 0 24 24">
+                        <path
+                            d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21 11.72 11.72 0 003.64.58 1 1 0 011 1v3.5a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.58 3.64 1 1 0 01-.21 1.11l-2.25 2.25z" />
+                    </svg>
+
+
+                    <span>+971 1234567890</span>
+                </div>
+                <div class="contact-item">
+                    <img src="/public/images/Vector.png" alt="">
+                    <span>Info@sianacars.com</span>
+                </div>
+                <div class="contact-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="40" height="40">
+                        <path
+                            d="M192 0C86 0 0 86 0 192c0 77.4 27.4 99.9 172.2 310.3a24 24 0 0 0 39.6 0C356.6 291.9 384 269.4 384 192 384 86 298 0 192 0zM192 272a80 80 0 1 1 0-160 80 80 0 0 1 0 160z"
+                            fill="none" stroke="#F5F5F5" stroke-width="30" />
+                    </svg>
+
+
+                    <span>1401, Damac Business Tower, Business Bay, Dubai, UAE.</span>
+                </div>
+            </div>
+
+            <div class="payment-methods">
+                <h3 class="section-title">Payment Methods</h3>
+                <div class="payment-icons">
+                    <i class="fab fa-cc-visa"></i> <!-- Visa -->
+                    <i class="fab fa-cc-mastercard"></i> <!-- MasterCard -->
+                    <img src="/public/images/tabby.png" alt="tabby">
+                    <i class="fab fa-apple-pay"></i> <!-- Apple Pay -->
+
+                </div>
+
+                <div class="download-section">
+                    <h3 class="section-title">Download Mobile App</h3>
+                    <div class="app-stores">
+                        <img src="/public/images/Play-Store.png" alt="Get it on Google Play" class="app-store-button">
+                        <img src="/public/images/App-Store.png" alt="Download on App Store" class="app-store-button">
                     </div>
                 </div>
-                <p class="brand-description">
-                    Professional Car Care is just a tap away! Download the app Siana Cars & Get the best quote from
-                    vendors around you!
-                </p>
             </div>
 
-            <div class="footer-column">
-                <h3>Contact Us</h3>
-                <ul class="contact-info">
-                    <li>
-                        <span class="icon">📞</span>
-                        <span>+971 1234567890</span>
-                    </li>
-                    <li>
-                        <span class="icon">✉️</span>
-                        <span>info@sianacars.com</span>
-                    </li>
-                    <li>
-                        <span class="icon">📍</span>
-                        <span>1401, Damac Business Tower,<br>Business Bay, Dubai, UAE.</span>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="footer-column">
-                <h3>Payment Methods</h3>
-                <div class="payment-methods">
-                    <img src="../public/images/visa.png" alt="Visa">
-                    <img src="/public/images/masterCard.png" alt="MasterCard">
-                    <img src="/public/images/telr.png" alt="Telr">
-                    <img src="/public/images/tabby.png" alt="Tabby">
-                    <img src="/public/images/pay.png" alt="Knet">
-                </div>
-
-                <h3>Download Mobile App</h3>
-                <div class="app-download">
-                    <a href="#"><img src="/public/images/Play-Store.png" alt="Google Play"></a>
-                    <a href="#"><img src="/public/images/App-Store.png" alt="App Store"></a>
-                </div>
-            </div>
-
-            <div class="footer-column">
-                <h3>Social Media</h3>
+            <div class="social-media">
+                <h3 class="section-title">Social Media</h3>
                 <div class="social-icons">
-                    <a href="#"><i class="fab fa-instagram" style="font-size: 24px; color: #e4405f;"></i>
+                    <i class="fab fa-instagram"></i> <!-- Instagram -->
+                    <i class="fab fa-facebook-f"></i> <!-- Facebook -->
+                    <i class="fab fa-whatsapp"></i> <!-- WhatsApp -->
 
-                    </a>
-                    <a href="#"><i class="fab fa-facebook" style="font-size: 24px; color: #1877f2;"></i>
-                    </a>
-                    <a href="#"><i class="fab fa-whatsapp" style="font-size: 24px; color: #25D366;"></i>
-
-                    </a>
                 </div>
+
             </div>
         </div>
 
-        <div class="footer-bottom">
-            <p>Copyright© 2024 © Siana Technologies L.L.C-FZ. All Rights Reserved</p>
+        <div class="copyright">
+            Copyright 2024 © Siana Technologies L.L.C-FZ. All Rights Reserved
         </div>
     </footer>
 
 
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('nav');
 
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            nav.classList.toggle('active');
+        });
 
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links li a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
+            });
+        });
 
-
+    </script>
 
 </body>
 
