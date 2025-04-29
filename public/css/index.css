@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
+
+
 /* General Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Michroma', sans-serif;
 }
 
 body {
@@ -649,6 +653,56 @@ p {
     max-width: 350px;
     margin: 0 auto;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+
+/* footer styling */
+
+.footer {
+    background-color: #0c1e1c;
+    color: #ffffff;
+    padding: 20px 0 0;
+    font-size: 14px;
+}
+
+.footer-top {
+    border-bottom: 1px solid #1a312e;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.footer-navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-nav{
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+
+.footer-nav li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-nav li a:hover {
+    color: #a9e5d9;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px 40px;
+    font-family: Arial, sans-serif;
 }
 
 /* Responsive Design */
