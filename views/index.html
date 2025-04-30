@@ -39,15 +39,11 @@
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
-                
             </div>
             <div class="logo">
-                    <img src="/public/images/logo.png" alt="Siana">
-                </div>
+                <img src="/public/images/logo.png" alt="Siana">
+            </div>
         </div>
-
-
-
 
         <a href="#" class="btn download-btn">Download App</a>
 
@@ -58,6 +54,32 @@
             <li><a href="#">Contact</a></li>
             <li><a href="#" class="btn download-btn">Download App</a></li>
         </ul>
+    </div>
+
+    <div class="mobile-menu">
+
+        <nav class="menu-nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Our Unique Features</a></li>
+                <li><a href="#">How App Works</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Get The App</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+        </nav>
+
+        <div class="menu-footer">
+            <img src="../public/images/logo.png" alt="Siana Logo" class="menu-logo">
+            <div class="app-stores">
+                <a href="#"><img src="../public/images/google-play.png" alt="Get it on Google Play"></a>
+                <a href="#"><img src="../public/images/app-store.png" alt="Download on App Store"></a>
+            </div>
+        </div>
     </div>
 
     <section class="hero">
@@ -393,48 +415,38 @@
 
 
     <script>
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
-        const links = document.querySelectorAll('.nav-links li');
-        const body = document.body;
+        // Update the JavaScript
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburger = document.querySelector('.hamburger');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const body = document.body;
 
-        hamburger.addEventListener('click', () => {
-            // Toggle Nav
-            navLinks.classList.toggle('active');
-            hamburger.classList.toggle('active');
+            function toggleMenu() {
+                mobileMenu.classList.toggle('active');
+                hamburger.classList.toggle('active');
+                body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : 'auto';
+            }
 
-            // Toggle Body Scroll
-            body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : 'auto';
+            // Hamburger click handler
+            hamburger.addEventListener('click', (e) => {
+                e.stopPropagation();
+                toggleMenu();
+            });
 
-            // Animate Links
-            links.forEach((link, index) => {
-                if (link.style.animation) {
-                    link.style.animation = '';
-                } else {
-                    link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+            // Close when clicking outside
+            document.addEventListener('click', (e) => {
+                if (mobileMenu.classList.contains('active') && !mobileMenu.contains(e.target)) {
+                    toggleMenu();
                 }
             });
-        });
 
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!navLinks.contains(e.target) && !hamburger.contains(e.target) && navLinks.classList.contains('active')) {
-                navLinks.classList.remove('active');
-                hamburger.classList.remove('active');
-                body.style.overflow = 'auto';
-            }
-        });
-
-        // Close menu when clicking nav links
-        links.forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                hamburger.classList.remove('active');
-                body.style.overflow = 'auto';
+            // Close menu on menu links click
+            document.querySelectorAll('.menu-nav a').forEach(link => {
+                link.addEventListener('click', toggleMenu);
             });
         });
+        
     </script>
-
 </body>
 
 </html>
